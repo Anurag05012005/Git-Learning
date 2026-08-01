@@ -1,0 +1,115 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2.2rem;
+}
+
+/* Game Board */
+.board {
+    width: 330px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+/* Cells */
+.cell {
+    width: 100px;
+    height: 100px;
+    background: #f5f5f5;
+    border: 3px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.cell:hover {
+    background: #d9f5ff;
+    transform: scale(1.05);
+}
+
+/* Restart Button */
+#restartButton {
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#restartButton:hover {
+    background: #0056b3;
+}
+
+/* Winning Message */
+.winning-message {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #28a745;
+    min-height: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 450px) {
+    .board {
+        width: 270px;
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        gap: 8px;
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #restartButton {
+        width: 100%;
+    }
+} 
